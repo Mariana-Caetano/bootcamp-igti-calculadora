@@ -1,14 +1,22 @@
+body {
+  background-color: rgb(196, 161, 196);
+}
+
 h1 {
   text-align: center;
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
 }
 h2 {
   text-align: center;
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .number {
   font-family: 'Courier New', Courier, monospace;
-  margin: 3px 5px;
+  padding-left: 15%;
+}
+
+#calc {
+  text-align: center;
 }
