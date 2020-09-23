@@ -1,7 +1,7 @@
 window.addEventListener('load', start);
 
-var A;
-var B;
+var inputA;
+var inputB;
 var button;
 var resultContents = [
   {
@@ -80,24 +80,24 @@ var resultContents = [
 
 function start() {
   preventFormSubmit();
-  A = document.querySelector('#A');
-  B = document.querySelector('#B');
-  button = document.querySelector('#button-cal');
+  inputA = document.querySelector('#inputA');
+  inputB = document.querySelector('#inputB');
+  button = document.querySelector('#buttonCalc');
   button.addEventListener('click', atributeValue);
   inputA.focus();
 }
 
 function atributeValue() {
-  var hasTextOnA = !!A.value && A.value.trim() !== '';
-  var hasTextOnB = !!B.value && B.value.trim() !== '';
+  var hasTextOnA = !!inputA.value && inputA.value.trim() !== '';
+  var hasTextOnB = !!inputB.value && inputB.value.trim() !== '';
   if (!hasTextOnA || !hasTextOnB) {
     alert('Informe os dois números');
     return;
   }
-  const numA = parseInt(A.value, 10);
-  const numB = parseInt(B.value, 10);
+  const numA = parseInt(inputA.value, 10);
+  const numB = parseInt(inputB.value, 10);
 
-  var results = document.getElementById('results');
+  var calc = document.getElementById('calc');
   calc.innerHTML = '';
   resultContents.forEach((element) => {
     var div = document.createElement('div');
